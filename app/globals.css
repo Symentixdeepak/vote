@@ -47,7 +47,7 @@ button:disabled {
 .page-shell {
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 32px 0;
+  padding: 88px 0 32px;
 }
 
 .confetti-canvas {
@@ -55,6 +55,27 @@ button:disabled {
   pointer-events: none;
   position: fixed;
   z-index: 10;
+}
+
+.warning-strip {
+  align-items: center;
+  background: #b91c1c;
+  border-bottom: 3px solid #7f1d1d;
+  box-shadow: 0 12px 28px rgba(127, 29, 29, 0.22);
+  color: white;
+  display: flex;
+  font-size: 0.98rem;
+  font-weight: 900;
+  gap: 10px;
+  justify-content: center;
+  left: 0;
+  min-height: 48px;
+  padding: 10px 18px;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  z-index: 20;
 }
 
 .title-band {
@@ -459,7 +480,7 @@ tr:last-child td {
 @media (max-width: 900px) {
   .page-shell {
     width: min(100% - 22px, 720px);
-    padding: 16px 0;
+    padding: 82px 0 16px;
   }
 
   .title-band {
@@ -488,6 +509,11 @@ tr:last-child td {
 @media (max-width: 560px) {
   .title-band {
     flex-direction: column;
+  }
+
+  .warning-strip {
+    font-size: 0.9rem;
+    min-height: 56px;
   }
 
   h1 {

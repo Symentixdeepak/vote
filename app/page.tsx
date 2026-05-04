@@ -1,6 +1,6 @@
 "use client";
 
-import { BarChart3, CheckCircle2, Medal, Send, UserRoundCheck, Vote } from "lucide-react";
+import { AlertTriangle, BarChart3, CheckCircle2, Medal, Send, UserRoundCheck, Vote } from "lucide-react";
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { CANDIDATES, getCandidateName } from "@/lib/candidates";
 import type { CandidateId } from "@/lib/candidates";
@@ -231,6 +231,11 @@ export default function Home() {
 
   return (
     <main className="page-shell">
+      <div className="warning-strip" role="status">
+        <AlertTriangle size={18} aria-hidden="true" />
+        <span>Fake voting and multi voting won't count.</span>
+      </div>
+
       <canvas ref={canvasRef} className="confetti-canvas" aria-hidden="true" />
 
       <section className="title-band" aria-labelledby="page-title">
