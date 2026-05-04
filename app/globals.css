@@ -446,6 +446,16 @@ tr:last-child td {
   justify-content: center;
 }
 
+.credit-footer {
+  color: #40505d;
+  font-size: 0.95rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  padding: 22px 0 4px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 @media (max-width: 900px) {
   .page-shell {
     width: min(100% - 22px, 720px);

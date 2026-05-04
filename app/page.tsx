@@ -402,6 +402,8 @@ export default function Home() {
           )}
         </aside>
       </section>
+
+      <footer className="credit-footer">Made with love by ABHI</footer>
     </main>
   );
 }
