@@ -1,0 +1,11 @@
+.next
+node_modules
+out
+data/votes.json
+.env
+.env*.local
+vercel.json
+*.tsbuildinfo
+dev-server.log
+dev-server.err
+tmp-npm-version.*
