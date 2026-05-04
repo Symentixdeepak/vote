@@ -42,7 +42,7 @@ export default function Home() {
   const [rollNumber, setRollNumber] = useState("");
   const [candidate, setCandidate] = useState<CandidateId | "">("");
   const [results, setResults] = useState<ResultsPayload>(defaultResults);
-  const [showResults, setShowResults] = useState(false);
+  const [showResults, setShowResults] = useState(true);
   const [yourVote, setYourVote] = useState<VoteRecord | undefined>();
   const [status, setStatus] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -61,6 +61,8 @@ export default function Home() {
         window.localStorage.removeItem(storageKey);
       }
     }
+
+    void loadResults();
 
     return () => {
       if (animationRef.current) {
@@ -317,7 +319,7 @@ export default function Home() {
             </button>
             <button className="secondary-button" type="button" onClick={loadResults} disabled={isLoadingResults}>
               <BarChart3 size={18} aria-hidden="true" />
-              {isLoadingResults ? "Loading" : "View Result"}
+              {isLoadingResults ? "Loading" : "Refresh Result"}
             </button>
           </div>
 
